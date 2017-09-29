@@ -12,7 +12,7 @@ import org.junit.Before;
 /**
  * Created by langshiquan on 17/9/29.
  */
-public class UnitTestBase {
+public class OpenSessionUnitTestBase {
     protected SessionFactory sessionFactory;
     protected Session session;
     protected Transaction transaction;

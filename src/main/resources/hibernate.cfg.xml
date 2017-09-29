@@ -29,8 +29,12 @@
         <!--getCurrentSession配置：thread（jdbc本地事务）|jta（jta事务） -->
         <property name="current_session_context_class">thread</property>
         <!-- 映射文件 -->
-        <!-- class和resource只能有一个-->
         <mapping class="com.baidu.langshiquan.module.User"/>
-        <!--<mapping resource="com/baidu/langshiquan/module/User.hbm.xml"/>-->
+        <mapping class="com.baidu.langshiquan.module.Order"/>
+        <mapping resource="com/baidu/langshiquan/module/Order.hbm.xml"/>
+
+        <!--配置方法1: 只配置带JPA注解的model类(class="")-->
+        <!--配置方法2: 带普通的model类 和 dbm.xml(resource="")-->
+
     </session-factory>
 </hibernate-configuration>
