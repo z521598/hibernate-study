@@ -37,6 +37,7 @@ public class CURDTest extends CurrentSessionUnitTestBase {
 
     @Test
     public void testDelete() {
-        session.delete(1);
+        User user = (User) session.get(User.class, 1);
+        session.delete(user);
     }
 }
