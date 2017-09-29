@@ -34,10 +34,16 @@ public class OpenSessionUnitTestBase {
 
     @After
     public void destory() {
-        // 提交事务
-        transaction.commit();
-        session.close();
-        sessionFactory.close();
+        if (transaction != null) {
+            // 提交事务
+            transaction.commit();
+        }
+        if (session != null) {
+            session.close();
+        }
+        if (sessionFactory != null) {
+            sessionFactory.close();
+        }
     }
 
 }

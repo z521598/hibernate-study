@@ -33,9 +33,15 @@ public class CurrentSessionUnitTestBase {
 
     @After
     public void destory() {
-        // session不关闭，但是事务要提交
-        transaction.commit();
-        sessionFactory.close();
+        if (transaction != null) {
+            // session不关闭，但是事务要提交
+            transaction.commit();
+        }
+
+        if (sessionFactory != null) {
+            sessionFactory.close();
+        }
+
     }
 
 }

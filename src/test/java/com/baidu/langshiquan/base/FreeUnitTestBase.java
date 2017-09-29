@@ -28,7 +28,9 @@ public class FreeUnitTestBase {
 
     @After
     public void destory() {
-        sessionFactory.close();
+        if (sessionFactory != null) {
+            sessionFactory.close();
+        }
     }
 
 }
