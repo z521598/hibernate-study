@@ -16,7 +16,7 @@ public class FirstTest extends UnitTestBase {
 
     @Test
     public void testFirst() {
-        User user = new User(1, "lsq", "man", new Date(), "beijing");
+        User user = new User( "lsq", "man", new Date(), "beijing");
         session.save(user);
     }
 }

@@ -124,6 +124,13 @@ public class User {
         this.address = address;
     }
 
+    public User(String sname, String gender, Date birthday, String address) {
+        this.sname = sname;
+        this.gender = gender;
+        this.birthday = birthday;
+        this.address = address;
+    }
+
     @Override
     public String toString() {
         return "User{" +

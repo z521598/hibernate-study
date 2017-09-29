@@ -6,8 +6,9 @@
     <session-factory>
         <!--为true表示将Hibernate发送给数据库的sql显示出来 -->
         <property name="show_sql">true</property>
+        <!--对sql语句进行排版-->
         <property name="format_sql">true</property>
-        <!-- 添加自动创建数据库表格的配置 -->
+        <!-- 添加自动创建数据库表格的配置 create|update|create-drop|validate-->
         <property name="hbm2ddl.auto">create</property>
         <!-- SQL方言，这边设定的是MySQL -->
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
@@ -19,13 +20,15 @@
         <property name="connection.username">root</property>
         <!-- 数据库密码-->
         <property name="connection.password">mysql</property>
-        <!--驱动程序-->
+        <!-- 默认数据库前缀 -->
+        <property name="hibernate.default_schema">hibernate_study</property>
+        <!-- 驱动程序-->
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <!-- JDBC URL -->
         <property name="connection.url">jdbc:mysql://localhost:3306/hibernate_study</property>
+        <!-- 映射文件 -->
+        <!-- class和resource只能有一个-->
         <mapping class="com.baidu.langshiquan.module.User"/>
         <!--<mapping resource="com/baidu/langshiquan/module/User.hbm.xml"/>-->
-        <!--映射文件 -->
-
     </session-factory>
 </hibernate-configuration>
