@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.BlockJUnit4ClassRunner;
 
+import com.baidu.langshiquan.base.UnitTestBase;
 import com.baidu.langshiquan.module.User;
 
 /**
@@ -16,7 +17,9 @@ public class FirstTest extends UnitTestBase {
 
     @Test
     public void testFirst() {
-        User user = new User( "lsq", "man", new Date(), "beijing");
+        User user = new User("lsq", "man", new Date(), "beijing");
         session.save(user);
     }
+
+
 }

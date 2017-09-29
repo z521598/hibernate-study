@@ -9,7 +9,7 @@
         <!--对sql语句进行排版-->
         <property name="format_sql">true</property>
         <!-- 添加自动创建数据库表格的配置 create|update|create-drop|validate-->
-        <property name="hbm2ddl.auto">create</property>
+        <property name="hbm2ddl.auto">update</property>
         <!-- SQL方言，这边设定的是MySQL -->
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
         <!-- 一次读的数据库记录数 -->
@@ -26,6 +26,8 @@
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <!-- JDBC URL -->
         <property name="connection.url">jdbc:mysql://localhost:3306/hibernate_study</property>
+        <!--getCurrentSession配置：thread（jdbc本地事务）|jta（jta事务） -->
+        <property name="current_session_context_class">thread</property>
         <!-- 映射文件 -->
         <!-- class和resource只能有一个-->
         <mapping class="com.baidu.langshiquan.module.User"/>

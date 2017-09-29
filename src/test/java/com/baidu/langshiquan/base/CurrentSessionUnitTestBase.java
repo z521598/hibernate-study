@@ -1,4 +1,4 @@
-package com.baidu.langshiquan;
+package com.baidu.langshiquan.base;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -12,7 +12,7 @@ import org.junit.Before;
 /**
  * Created by langshiquan on 17/9/29.
  */
-public class UnitTestBase {
+public class CurrentSessionUnitTestBase {
     protected SessionFactory sessionFactory;
     protected Session session;
     protected Transaction transaction;
@@ -27,16 +27,14 @@ public class UnitTestBase {
         // 创建会话工厂对象
         sessionFactory = config.buildSessionFactory(serviceRegistry);
         // 会话对象
-        session = sessionFactory.openSession();
-        // 开启事务
+        session = sessionFactory.getCurrentSession();
         transaction = session.beginTransaction();
     }
 
     @After
     public void destory() {
-        // 提交事务
+        // session不关闭，但是事务要提交
         transaction.commit();
-        session.close();
         sessionFactory.close();
     }
 
