@@ -1,9 +1,16 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!DOCTYPE hibernate-mapping PUBLIC
-    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class name="com.baidu.langshiquan.module.Order" table="order" schema="hibernate_study">
+        <!--开启二级缓存-->
+        <!--
+        usage:指定缓存策略，transactional|read-write|nonstrict-read-write|read-only
+        region(非必须):二级缓存的域名，如ehcache配置的name，不指定，则为默认。
+        include(非必须):指定是否缓存延迟加载对象，是：non-laz，否：all
+        -->
+        <cache usage="read-only" include="all"/>
         <id name="id" column="id">
             <generator class="native"/>
         </id>

@@ -37,7 +37,17 @@
             <artifactId>slf4j-nop</artifactId>
             <version>1.6.4</version>
         </dependency>
-
+        <!--hibernate 二级缓存 ehcache-->
+        <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache-core</artifactId>
+            <version>2.6.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-ehcache</artifactId>
+            <version>${project.hibernate.version}</version>
+        </dependency>
         <!-- 添加javassist -->
         <dependency>
             <groupId>javassist</groupId>

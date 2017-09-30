@@ -3,11 +3,15 @@ package com.baidu.langshiquan.module;
 import java.util.Date;
 
 import javax.persistence.Basic;
+import javax.persistence.Cacheable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 /**
  * Created by langshiquan on 17/9/29.
@@ -16,6 +20,7 @@ import javax.persistence.Id;
 // 2.不带参数的默认的构造方法
 // 3.属性私有
 // 4.属性gette/setter封装
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 @Entity
 public class User {
 

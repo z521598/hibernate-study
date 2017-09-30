@@ -3,6 +3,9 @@
         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
+        <!--指定二级缓存的外部实现类-->
+        <!--hibernate3.0的配置:<property name="cache.provider_class">net.sf.ehcache.hibernate.EhCacheProvider</property>-->
+        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
         <!--为true表示将Hibernate发送给数据库的sql显示出来 -->
         <property name="show_sql">true</property>
         <!--对sql语句进行排版-->
@@ -28,12 +31,12 @@
         <!--getCurrentSession配置：thread（jdbc本地事务）|jta（jta事务） -->
         <property name="current_session_context_class">thread</property>
         <!-- 映射文件 -->
+        <!--配置方法1: 只配置带JPA注解的model类(class="")-->
+        <!--配置方法2: 带普通的model类 和 dbm.xml(resource="")-->
         <mapping class="com.baidu.langshiquan.module.User"/>
         <mapping class="com.baidu.langshiquan.module.Order"/>
         <mapping resource="com/baidu/langshiquan/module/Order.hbm.xml"/>
 
-        <!--配置方法1: 只配置带JPA注解的model类(class="")-->
-        <!--配置方法2: 带普通的model类 和 dbm.xml(resource="")-->
 
     </session-factory>
 </hibernate-configuration>
