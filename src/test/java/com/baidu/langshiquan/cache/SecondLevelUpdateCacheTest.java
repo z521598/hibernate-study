@@ -5,8 +5,7 @@ import org.hibernate.Transaction;
 import org.junit.Test;
 
 import com.baidu.langshiquan.base.FreeUnitTestBase;
-import com.baidu.langshiquan.module.Order;
-import com.baidu.langshiquan.module.User;
+import com.baidu.langshiquan.model.User;
 
 /**
  * Created by langshiquan on 17/9/30.

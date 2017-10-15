@@ -3,7 +3,7 @@ package com.baidu.langshiquan;
 import org.junit.Test;
 
 import com.baidu.langshiquan.base.CurrentSessionUnitTestBase;
-import com.baidu.langshiquan.module.Order;
+import com.baidu.langshiquan.model.Order;
 
 /**
  * Created by langshiquan on 17/9/29.

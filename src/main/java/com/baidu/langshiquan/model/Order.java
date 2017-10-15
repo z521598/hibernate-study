@@ -1,7 +1,4 @@
-package com.baidu.langshiquan.module;
-
-import javax.persistence.Entity;
-import javax.persistence.Id;
+package com.baidu.langshiquan.model;
 
 /**
  * Created by langshiquan on 17/9/29.

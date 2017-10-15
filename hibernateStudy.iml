@@ -5,11 +5,13 @@
       <configuration>
         <datasource-map>
           <unit-entry name="hibernate.cfg.xml" value="34f93efb-50f9-493f-86e6-108a3374ffba" />
+          <unit-entry name="hibernate_hql.cfg.xml" value="88788f91-b615-4718-92e2-040999a367a8" />
         </datasource-map>
         <naming-strategy-map>
           <unit-entry name="hibernate.cfg.xml" />
         </naming-strategy-map>
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate_hql.cfg.xml" />
       </configuration>
     </facet>
   </component>

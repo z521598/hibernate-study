@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.baidu.langshiquan.hql.model.Orderitem" table="orderitem" schema="webshop">
+        <id name="id" column="Id"/>
+        <property name="orderid" column="ORDERID"/>
+        <property name="commodity" column="COMMODITY"/>
+        <property name="discount" column="DISCOUNT"/>
+        <property name="actprice" column="ACTPRICE"/>
+        <property name="amount" column="AMOUNT"/>
+    </class>
+</hibernate-mapping>

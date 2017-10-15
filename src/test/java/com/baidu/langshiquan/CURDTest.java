@@ -5,7 +5,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.BlockJUnit4ClassRunner;
 
 import com.baidu.langshiquan.base.CurrentSessionUnitTestBase;
-import com.baidu.langshiquan.module.User;
+import com.baidu.langshiquan.model.User;
 
 /**
  * Created by langshiquan on 17/9/29.

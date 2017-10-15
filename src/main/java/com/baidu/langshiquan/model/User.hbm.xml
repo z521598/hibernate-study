@@ -3,7 +3,7 @@
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="com.baidu.langshiquan.module.User" table="user" schema="hibernate_study">
+    <class name="com.baidu.langshiquan.model.User" table="user" schema="hibernate_study">
         <id name="sid" column="sid"/>
         <property name="sname" column="sname"/>
         <property name="gender" column="gender"/>
