@@ -88,6 +88,15 @@ public class Seller {
         this.business = business;
     }
 
+    public Seller() {
+    }
+    // for hql 自定义查询类型
+    public Seller(String name, String tel, String address) {
+        this.name = name;
+        this.tel = tel;
+        this.address = address;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
