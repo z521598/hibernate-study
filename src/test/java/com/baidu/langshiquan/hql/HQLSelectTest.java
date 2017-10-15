@@ -15,7 +15,7 @@ import com.baidu.langshiquan.hql.model.Seller;
  * Created by langshiquan on 17/10/15.
  */
 @RunWith(BlockJUnit4ClassRunner.class)
-public class HQLSimpleTest extends HQLUnitTestBase {
+public class HQLSelectTest extends HQLUnitTestBase {
 
     @Test
     public void testHQL() {
